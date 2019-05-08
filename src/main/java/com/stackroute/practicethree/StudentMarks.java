@@ -9,40 +9,39 @@ import java.util.Scanner;
 
 public class StudentMarks {
 
-    Scanner s = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
-    public int numOfStudents(){
+    public int numOfStudents() {
         System.out.print("Enter the number of students");
-        int numOfStudents = s.nextInt();                                   //reading number of students
+        int numOfStudents = scanner.nextInt();                                   //reading number of students
         return numOfStudents;
     }
 
-    public void studentsGrades(int numOfStudents){
-        int[] stuGrades=new int[numOfStudents];
+    public void studentsGrades(int numOfStudents) {
+        int[] stuGrades = new int[numOfStudents];
         int i;
-        for (i=0;i<numOfStudents;i++){
+        for (i = 0; i < numOfStudents; i++) {
 
-            System.out.print("Grade of Student"+(i+1)+": ");               //reading grades of students
-            stuGrades[i]=s.nextInt();
+            System.out.print("Grade of Student" + (i + 1) + ": ");                    //reading grades of students
+            stuGrades[i] = scanner.nextInt();
 
             try {
-                if((stuGrades[i]>100)||(stuGrades[i]<0)){                  //checking if the grade is greater than 100 and less than 0
-                    System.out.print("Error");                             //print error message
+                if ((stuGrades[i] > 100) || (stuGrades[i] < 0)) {                  //checking if the grade is greater than 100 and less than 0
+                    System.out.print("Error");                                    //print error message
                 }
-            }catch (Exception e){}
-
+            } catch (Exception e) {
             }
+
         }
     }
+}
 
-
-class StudentMarksGrade{
-
-
+class StudentMarksGrade {
+    
     public static void main(String[] args) {
 
-        StudentMarks stdmarks=new StudentMarks();
-        int numOfStudents=stdmarks.numOfStudents();
-        stdmarks.studentsGrades(numOfStudents);
+        StudentMarks studentMarks = new StudentMarks();
+        int numOfStudents = studentMarks.numOfStudents();
+        studentMarks.studentsGrades(numOfStudents);
     }
 }

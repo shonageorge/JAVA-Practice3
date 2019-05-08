@@ -10,14 +10,14 @@ import java.util.Date;
 public class DateOfWeek {
     public static void main(String[] args) {
 
-       Calendar c = Calendar.getInstance();
+        Calendar calendar = Calendar.getInstance();
 
-       c.set(Calendar.DAY_OF_WEEK,Calendar.MONDAY);          //setting the first day of week as monday
+        calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);          //setting the first day of week as monday
 
-        SimpleDateFormat dateformat=new SimpleDateFormat("EEE dd/MM/y");            //displaying format
-        System.out.println("First Date of Week : "+dateformat.format(c.getTime()));         //getting and printing the date and time of 1st day of week in specified format
-        c.add(Calendar.DATE, 6);                                                    // adding 6 to the starting date to get last date of week
-        System.out.println("Last Date of Week : "+dateformat.format(c.getTime()));          //getting and printing the date and time of last day of week in specified format
+        SimpleDateFormat dateformat = new SimpleDateFormat("EEE dd/MM/y");                 //displaying format
+        System.out.println("First Date of Week : " + dateformat.format(calendar.getTime()));      //getting and printing the date and time of 1st day of week in specified format
+        calendar.add(Calendar.DATE, 6);                                                   // adding 6 to the starting date to get last date of week
+        System.out.println("Last Date of Week : " + dateformat.format(calendar.getTime()));       //getting and printing the date and time of last day of week in specified format
     }
 }
 

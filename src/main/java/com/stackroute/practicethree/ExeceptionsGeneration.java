@@ -13,12 +13,8 @@ public class ExeceptionsGeneration {
         int[] array = new int[5];
         String name = "";
         int length = name.length();
-        //int index=array.indexOf("");
-
 
         System.out.println(name);
-
-
 
         try {                                                                   //For NullPointerException
 
