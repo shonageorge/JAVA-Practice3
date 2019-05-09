@@ -37,7 +37,7 @@ public class StudentMarks {
 }
 
 class StudentMarksGrade {
-    
+
     public static void main(String[] args) {
 
         StudentMarks studentMarks = new StudentMarks();
